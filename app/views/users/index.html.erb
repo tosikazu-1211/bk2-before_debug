@@ -33,11 +33,11 @@
 						<td><%= user.name %></td>
 
 						<td>
-							<%= link_to user.followers.count, follows_user_path(user) %>
+							<%= link_to "フォロー数:#{user.followers.count}", followers_user_path(user) %>
 						</td>
 
 							<td>
-								<%= link_to user.followings.count, followers_user_path(user) %>
+								<%= link_to "フォロワー数:#{user.followings.count}", followers_user_path(user) %>
 							</td>
 
 								<td><% if current_user != user %>
